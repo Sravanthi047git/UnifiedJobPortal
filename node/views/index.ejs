@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unified Job Portal</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div class="header">
+        <form  id="jobformid" name="jobformname" action="/addsearch" method="post">
+            <!----<h1> Find what you enjoy doing </h1>--->
+
+            <div class="form-box">
+
+                <input type="text" class="search-field designation" id="designationId"
+                        placeholder="Enter job title you want" name="designation">
+
+                <input type="text" class="search-field location" id="locationId"
+                        placeholder="Enter your preferred location" name="location">
+
+                <!----<label for="jobs" style="color:white" >Select the number of jobs you want to retrieve</label>--->
+                <select name="no_of_jobs" id="no_of_jobs" class="wrapper-dropdown">
+                    <option value="2">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+
+                <select name="site" id="job_site" class="wrapper-dropdown">
+                    <option value="1">Dice</option>
+                    <option value="2">Indeed</option>
+                    <option value="3">Glassdoor</option>
+                    <option value="4">All</option>
+                </select>
+
+
+                <!----<button class="search-btn" type="button">Let's go</button>--->
+                <button id="btnSubmit" class="search-btn" type="submit" onclick='pageRedirect();' >Submit</button>
+
+            </div>
+
+        </form>
+
+    </div>
+  </body>
+
+</html>
